@@ -1,0 +1,65 @@
+=== DIAGNOSTIC REPORT - TREND FOLLOWING STRATEGIES ===
+
+1. CONFRONTO GENERALE TREND-FOLLOWING vs BUY-AND-HOLD
+============================================================
+    Asset  Strategy_Return  BnH_Return  Strategy_Sharpe  BnH_Sharpe  Strategy_Vol  BnH_Vol  Outperformance  Sharpe_Diff
+   UST10Y          -0.0734      0.0024          -0.0648      0.0019        0.0569   0.0594         -0.0758      -0.0668
+    SP500           0.2117      4.3268           0.0506      0.4356        0.1846   0.1937         -4.1152      -0.3850
+      OMX          -0.1329      2.3650          -0.0340      0.2884        0.2052   0.2128         -2.4978      -0.3224
+     GOLD           0.9330      7.2794           0.1897      0.6088        0.1710   0.1771         -6.3465      -0.4191
+  FTSE100          -0.6590      0.9055          -0.2983      0.1790        0.1687   0.1755         -1.5645      -0.4773
+      DAX           0.0933      4.5846           0.0216      0.4157        0.1984   0.2066         -4.4913      -0.3941
+   NASDAQ           1.8076     13.5229           0.2434      0.6305        0.2104   0.2192        -11.7153      -0.3870
+      BTC          -0.6665    177.8380          -0.1855      0.6782        0.3575   0.5645       -178.5045      -0.8637
+ HANGSENG          -0.0275      0.7907          -0.0058      0.1203        0.2387   0.2428         -0.8181      -0.1260
+EUROSTOXX          -0.7823      0.7824          -0.3476      0.1317        0.2026   0.2130         -1.5647      -0.4793
+    CAC40          -0.7357      0.9850          -0.3118      0.1591        0.1971   0.2088         -1.7207      -0.4709
+    CRUDE          -0.8272      0.5572          -0.1947      0.0507        0.4188   0.4279         -1.3844      -0.2454
+
+2. INVESTIGAZIONE ANOMALIA BTC
+==============================
+date_range: 2014-07-17 to 2025-09-02
+total_days: 4033
+btc_bnh_total_return: 177.8380122309602
+btc_bnh_ann_return: 0.3828616717893991
+signal_distribution: {'long_periods': np.int64(115), 'short_periods': np.int64(1659), 'neutral_periods': np.int64(2259)}
+strategy_total_return: -0.6665155534043052
+yearly_performance: {2015: np.float64(-0.2521263613251018), 2016: np.float64(0.028037484871251683), 2017: np.float64(0.0), 2018: np.float64(0.9390062683357594), 2019: np.float64(-0.12134151975224505), 2020: np.float64(-0.3414114460902271), 2021: np.float64(-0.5318278303760591), 2022: np.float64(0.7607215684097615), 2023: np.float64(-0.5006488474505337), 2024: np.float64(-0.2821291570508003), 2025: np.float64(-0.2107490966364659)}
+worst_years: [(2021, np.float64(-0.5318278303760591)), (2023, np.float64(-0.5006488474505337)), (2020, np.float64(-0.3414114460902271))]
+
+
+3. ANALISI PER SOTTO-PERIODI
+==============================
+
+BTC:
+  QE_Era_2012_2015: Strategy=23.96%, BnH=-31.05%, Outperf=55.01%
+  Post_Brexit_2016_2019: Strategy=75.15%, BnH=1566.22%, Outperf=-1491.07%
+  COVID_Era_2020_2021: Strategy=-69.17%, BnH=546.99%, Outperf=-616.15%
+  Recent_2022_2025: Strategy=-50.19%, BnH=140.59%, Outperf=-190.78%
+
+CAC40:
+  Pre_Crisis_2005_2007: Strategy=-2.60%, BnH=45.57%, Outperf=-48.17%
+  Financial_Crisis_2008: Strategy=42.43%, BnH=-42.69%, Outperf=85.12%
+  Recovery_2009_2011: Strategy=-29.88%, BnH=-1.72%, Outperf=-28.16%
+  QE_Era_2012_2015: Strategy=-38.51%, BnH=46.53%, Outperf=-85.05%
+  Post_Brexit_2016_2019: Strategy=-9.99%, BnH=28.71%, Outperf=-38.69%
+  COVID_Era_2020_2021: Strategy=-23.95%, BnH=19.65%, Outperf=-43.60%
+  Recent_2022_2025: Strategy=-35.46%, BnH=7.29%, Outperf=-42.75%
+
+EUROSTOXX:
+  Pre_Crisis_2005_2007: Strategy=6.30%, BnH=49.18%, Outperf=-42.88%
+  Financial_Crisis_2008: Strategy=42.97%, BnH=-44.76%, Outperf=87.73%
+  Recovery_2009_2011: Strategy=-35.25%, BnH=-5.80%, Outperf=-29.45%
+  QE_Era_2012_2015: Strategy=-47.40%, BnH=42.20%, Outperf=-89.60%
+  Post_Brexit_2016_2019: Strategy=-2.27%, BnH=13.62%, Outperf=-15.89%
+  COVID_Era_2020_2021: Strategy=-37.58%, BnH=14.98%, Outperf=-52.56%
+  Recent_2022_2025: Strategy=-31.08%, BnH=23.59%, Outperf=-54.67%
+
+CRUDE:
+  Pre_Crisis_2005_2007: Strategy=-27.04%, BnH=127.87%, Outperf=-154.91%
+  Financial_Crisis_2008: Strategy=75.70%, BnH=-53.53%, Outperf=129.23%
+  Recovery_2009_2011: Strategy=-16.84%, BnH=121.59%, Outperf=-138.43%
+  QE_Era_2012_2015: Strategy=-13.87%, BnH=-62.52%, Outperf=48.66%
+  Post_Brexit_2016_2019: Strategy=-56.43%, BnH=64.85%, Outperf=-121.28%
+  COVID_Era_2020_2021: Strategy=-45.79%, BnH=23.17%, Outperf=-68.96%
+  Recent_2022_2025: Strategy=-20.33%, BnH=-12.79%, Outperf=-7.54%
